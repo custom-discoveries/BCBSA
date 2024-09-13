@@ -1,0 +1,15 @@
+secret,
+token,
+graphName,BCBSA_Graph
+dataDir,GraphData/
+splitMaxFileSize,
+splitMaxLines,
+DDLDir,DDLs/
+ddlDataPath,DDLs/Data/
+ddlQueryPath,DDLs/Queries/
+ddlSchemaPath,DDLs/Schema/
+remoteServer,False
+projectDir,/home/tigergraph/mydata/BCBSA/
+username,hawkeye
+password,funFactsX55
+version,3.7.0
