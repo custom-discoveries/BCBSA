@@ -1,0 +1,14 @@
+CREATE OR REPLACE QUERY findState(String state) { 
+
+  Start = {States.*};
+  STRING stateSearch  = upper(state);
+  RS= {};
+  
+  IF (state != "") THEN
+    RS = Select s FROM Start:s WHERE s.alias == stateSearch;
+  ELSE
+    RS = Select s FROM Start:s;
+  END;
+  
+  PRINT RS, RS.size(); 
+}

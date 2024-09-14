@@ -1,19 +1,19 @@
 ﻿company_id,state,company_name,brand_name
-Anthem,6000,Anthem,Anthem Blue Cross of California
-Anthem,8000,Anthem,Anthem Blue Cross Blue Shield of Colorado
-Anthem,9000,Anthem,Anthem Blue Cross of Connecticut
-Anthem,13000,Anthem,Blue Cross Blue Shield of Georgia
-Anthem,18000,Anthem,Anthem Blue Cross Blue Shield of Indiana
-Anthem,21000,Anthem,Anthem Blue Cross Blue Shield of Kentucky
-Anthem,23000,Anthem,Anthem Blue Cross Blue Shield of Maine
-Anthem,29000,Anthem,Anthem Blue Cross Blue Shield of Missouri
-Anthem,31000,Anthem,Anthem Blue Cross Blue Shield of Nebraska
-Anthem,32000,Anthem,Blue Cross Blue Shield of Nevada
-Anthem,33000,Anthem,Anthem Blue Cross Blue Shield of New Hampshire
-Anthem,36000,Anthem,Empire Blue Cross Blue Shield of New York
-Anthem,39000,Anthem,Anthem Blue Cross Blue Shield of Ohio
-Anthem,51000,Anthem,Anthem Blue Cross Blue Shield of Virginia
-Anthem,55000,Anthem,Anthem Blue Cross Blue Shield of Wisconsin
+ANTHEM,6000,Elevance Health,Anthem Blue Cross of California
+ANTHEM,8000,Elevance Health,Anthem Blue Cross Blue Shield of Colorado
+ANTHEM,9000,Elevance Health,Anthem Blue Cross of Connecticut
+ANTHEM,13000,Elevance Health,Blue Cross Blue Shield of Georgia
+ANTHEM,18000,Elevance Health,Anthem Blue Cross Blue Shield of Indiana
+ANTHEM,21000,Elevance Health,Anthem Blue Cross Blue Shield of Kentucky
+ANTHEM,23000,Elevance Health,Anthem Blue Cross Blue Shield of Maine
+ANTHEM,29000,Elevance Health,Anthem Blue Cross Blue Shield of Missouri
+ANTHEM,31000,Elevance Health,Anthem Blue Cross Blue Shield of Nebraska
+ANTHEM,32000,Elevance Health,Blue Cross Blue Shield of Nevada
+ANTHEM,33000,Elevance Health,Anthem Blue Cross Blue Shield of New Hampshire
+ANTHEM,36000,Elevance Health,Empire Blue Cross Blue Shield of New York
+ANTHEM,39000,Elevance Health,Anthem Blue Cross Blue Shield of Ohio
+ANTHEM,51000,Elevance Health,Anthem Blue Cross Blue Shield of Virginia
+ANTHEM,55000,Elevance Health,Anthem Blue Cross Blue Shield of Wisconsin
 BCBSAL,1000,Blue Cross Blue Shield of Alabama,Blue Cross Blue Shield of Alabama
 BCBSAR,5000,Blue Cross Blue Shield of Arkansas,Blue Cross Blue Shield of Arkansas
 BCBSAZ,4000,Blue Cross Blue Shield of Arizona,Blue Cross Blue Shield of Arizona
@@ -36,28 +36,28 @@ BCBSSC,45000,Blue Cross Blue Shield of South Carolina,Blue Cross Blue Shield of 
 BCBSTN,47000,Blue Cross Blue Shield of Tennessee,Blue Cross Blue Shield of Tennessee
 BCBSVT,50000,Blue Cross Blue Shield of Vermont,Blue Cross Blue Shield of Vermont
 BCBSWY,56000,Blue Cross Blue Shield of Wyoming,Blue Cross Blue Shield of Wyoming
-CareFirst,11000,CareFirst,CareFirst Blue Cross Blue Shield
-CareFirst,24000,CareFirst,CareFirst Blue Cross Blue Shield
-CareFirst,51000,CareFirst,CareFirst Blue Cross Blue Shield
+CAREFIRST,11000,CareFirst,CareFirst Blue Cross Blue Shield
+CAREFIRST,24000,CareFirst,CareFirst Blue Cross Blue Shield
+CAREFIRST,51000,CareFirst,CareFirst Blue Cross Blue Shield
 CHS,16000,Cambia Health Solutions,Regence BlueShield of Idaho
 CHS,41000,Cambia Health Solutions,Regence Blue Cross Blue Shield of Oregon
 CHS,49000,Cambia Health Solutions,Regence Blue Cross Blue Shield of Utah
 CHS,53000,Cambia Health Solutions,Regence BlueShield of Washington
 CPC,42000,Capital Blue Cross,Capital Blue
-Excellus,36000,Excellus,Excellus BlueCross BlueShield of New York
+EXCELLUS,36000,Excellus,Excellus BlueCross BlueShield of New York
 HCSC,17000,Health Care Service Corporation,Blue Cross Blue Shield of Illinois
 HCSC,30000,Health Care Service Corporation,Blue Cross Blue Shield of Montana
 HCSC,35000,Health Care Service Corporation,Blue Cross Blue Shield of New Mexico
 HCSC,40000,Health Care Service Corporation,Blue Cross Blue Shield of Oklahoma
 HCSC,48000,Health Care Service Corporation,Blue Cross Blue Shield of Texas
-Highmark,42000,Highmark,Highmark Blue Shield Pennsylvania
-Highmark,54000,Highmark,Highmark Blue Cross Blue Shield of West Virginia
-Highmark,10000,Highmark,Highmark Blue Cross Blue Shield of Delaware
-Highmark,36000,Highmark,Highmark Blue Cross Blue Shield of New York
-Horizon,34000,Horizon,Horizon Blue Cross Blue Shield of New Jersey
+HIGHMARK,42000,Highmark,Highmark Blue Shield Pennsylvania
+HIGHMARK,54000,Highmark,Highmark Blue Cross Blue Shield of West Virginia
+HIGHMARK,10000,Highmark,Highmark Blue Cross Blue Shield of Delaware
+HIGHMARK,36000,Highmark,Highmark Blue Cross Blue Shield of New York
+HORIZON,34000,Horizon,Horizon Blue Cross Blue Shield of New Jersey
 IBC,42000,Independence Health Group,Independence Blue Cross
-Premera,2000,Premera,Premera Blue Cross Blue Shield of Alaska
-Premera,53000,Premera,Premera Blue Cross Blue Shield of Washington
+PREMERA,2000,Premera,Premera Blue Cross Blue Shield of Alaska
+PREMERA,53000,Premera,Premera Blue Cross Blue Shield of Washington
 TSMC,72000,Triple-S Management Corop,Blue Cross Blue Shield of Puerto Rico
-Wellmark,19000,Wellmark,Wellmark Blue Cross Blue Shield of Iowa
-Wellmark,46000,Wellmark,Wellmark Blue Cross Blue Shield of South Dakota
+WELLMARK,19000,Wellmark,Wellmark Blue Cross Blue Shield of Iowa
+WELLMARK,46000,Wellmark,Wellmark Blue Cross Blue Shield of South Dakota

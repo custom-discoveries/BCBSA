@@ -1,0 +1,14 @@
+CREATE OR REPLACE QUERY findCompany(String company) { 
+
+  Start = {Companies.*};
+  STRING companySearch  = "%" + upper(company) + "%";
+  RS= {};
+  
+  IF (company != "") THEN
+    RS = Select c FROM Start:c WHERE c.id LIKE companySearch;
+  ELSE
+    RS = Select c FROM Start:c;
+  END;
+  
+  PRINT RS, RS.size(); 
+}

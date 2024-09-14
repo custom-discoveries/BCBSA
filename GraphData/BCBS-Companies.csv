@@ -1,5 +1,5 @@
 ﻿company_id,company_name,root_id
-Anthem,Elevance Health,0
+ANTHEM,Elevance Health,0
 BCBSAL,Blue Cross Blue Shield of Alabama,0
 BCBSAR,Blue Cross Blue Shield of Arkansas,0
 BCBSAZ,Blue Cross Blue Shield of Arizona,0
@@ -22,14 +22,14 @@ BCBSSC,Blue Cross Blue Shield of South Carolina,0
 BCBSTN,Blue Cross Blue Shield of Tennessee,0
 BCBSVT,Blue Cross Blue Shield of Vermont,0
 BCBSWY,Blue Cross Blue Shield of Wyoming,0
-CareFirst,CareFirst,0
+CAREFIRST,CareFirst,0
 CHS,Cambia Health Solutions,0
 CPC,Capital Blue Cross,0
-Excellus,Excellus,0
+EXCELLUS,Excellus,0
 HCSC,Health Care Service Corporation,0
-Highmark,Highmark,0
-Horizon,Horizon,0
+HIGHMARK,Highmark,0
+HORIZON,Horizon,0
 IBC,Independence Health Group,0
-Premera,Premera,0
+PREMERA,Premera,0
 TSMC,Triple-S Mgt Corp,
-Wellmark,Wellmark,0
+WELLMARK,Wellmark,0
