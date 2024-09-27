@@ -11,6 +11,6 @@ To install this TigerGraph demo, clone this repository at a terminal command pro
     - Select -q (sub option -b) to Define and Install the queries
 [^1]: See Cheetah [README.md](https://github.com/custom-discoveries/Cheetah/blob/main/README.md) for installation and setup of Cheetah
 ### In TigerGraph GraphStudio:
-Run the query scripts in the following order in TigerGraph GraphStudio Write Queries:
+Run the query scripts in TigerGraph GraphStudio Write Queries:
 - findCompany.gsql
 - findState.gsql
