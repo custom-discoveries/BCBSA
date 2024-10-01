@@ -1,7 +1,5 @@
 #
 DROP JOB ALL
-DROP GRAPH BCBSA_Graph
-CREATE GRAPH BCBSA_Graph(*)
 USE Graph BCBSA_Graph
 set exit_on_error = "false"
 #
