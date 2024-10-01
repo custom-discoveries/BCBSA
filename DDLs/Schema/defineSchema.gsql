@@ -1,7 +1,7 @@
 #
 DROP JOB ALL
 DROP Graph BCBSA_Graph
-CREATE Graph BCBSA_Graph(Region, hasDivision, Division, hasStates, State, hasCapital, City)
+CREATE Graph BCBSA_Graph(Region, hasDivision, Division, hasStates, State)
 USE Graph BCBSA_Graph
 set exit_on_error = "false"
 #
@@ -13,8 +13,6 @@ CREATE SCHEMA_CHANGE JOB BCBSA_Graph_Schema_Job FOR GRAPH BCBSA_Graph {
   #Color #079705 Icon: Company-1
   ADD VERTEX Companies (PRIMARY_ID id STRING, name STRING) WITH STATS="OUTDEGREE_BY_EDGETYPE", PRIMARY_ID_AS_ATTRIBUTE="true";
 
-  #Color #e80b43 Icon: Address
-  #ADD VERTEX States (PRIMARY_ID id INT, name STRING, alias STRING, capitol STRING) WITH STATS="OUTDEGREE_BY_EDGETYPE", PRIMARY_ID_AS_ATTRIBUTE="true";
 #
   ADD UNDIRECTED EDGE hasCompany (FROM Root, TO Companies);
   ADD UNDIRECTED EDGE operatesIn (FROM Companies, TO State, planName STRING);
