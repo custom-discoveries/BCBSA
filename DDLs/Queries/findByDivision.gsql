@@ -1,0 +1,29 @@
+CREATE QUERY findByDivision(STRING byDivision="SAD",STRING byState="VA") FOR GRAPH BCBSA_Graph { 
+/**
+ Copyright (c) 2024, Custom Discoveries Inc.
+ All rights reserved.
+
+ There are 9 Divisions:
+  - New England Division  NED
+  - Middle Atlantic Division  MAD
+  - East North Central Division  NCED
+  - West North Central Division  NCWD
+  - South Atlantic Division  SAD
+  - East South Central Division  SCED
+  - West South Central Division  SCWD
+  - Mountain Division  WRMD
+  - Pacific Division  WRPD
+**/
+  Start = {Division.*};
+  STRING divSearch  = "%" + lower(byDivision) + "%";
+  STRING stateSearch = lower(byState);
+  RS= {};
+  
+  IF (byDivision != "" AND byState == "") THEN
+    RS = SELECT franchise FROM Start:d-(hasStates:s)-:state-(operatesIn:oi)-:company-(hasFranchise:hf)-:franchise WHERE lower(d.division_id) LIKE divSearch;
+  ELSE IF (byDivision != "" AND byState != "") THEN
+    RS = SELECT franchise FROM Start:d-(hasStates:s)-:state-(operatesIn:oi)-:company-(hasFranchise:hf)-:franchise
+    WHERE lower(d.division_id) LIKE divSearch AND lower(state.alias) == stateSearch;
+  END;
+  PRINT RS; 
+}

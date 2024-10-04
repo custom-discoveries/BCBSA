@@ -1,5 +1,8 @@
-CREATE OR REPLACE QUERY findState(String state) {
-
+CREATE QUERY findState(String state) {
+/**
+ Copyright (c) 2024, Custom Discoveries Inc.
+ All rights reserved.
+**/
   Start = {State.*};
   STRING stateSearch  = upper(state);
   RS= {};

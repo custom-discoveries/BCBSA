@@ -1,13 +1,19 @@
-CREATE OR REPLACE QUERY findCompany(String company) { 
-
+CREATE OR REPLACE QUERY findCompany(String companyId, STRING franchiseId) { 
+/**
+ Copyright (c) 2024, Custom Discoveries Inc.
+ All rights reserved.
+**/
   Start = {Companies.*};
-  STRING companySearch  = "%" + upper(company) + "%";
-  RS= {};
+  StartFranchise = {Franchise.*};
   
-  IF (company != "") THEN
-    RS = Select c FROM Start:c WHERE c.id LIKE companySearch;
-  ELSE
-    RS = Select c FROM Start:c;
+  STRING companySearch  = "%" + lower(companyId) + "%";
+  STRING franchiseSearch = "%" + lower(franchiseId) + "%";
+  RS={};
+  
+  IF (companyId != "" AND franchiseId == "") THEN
+    RS = Select c FROM Start:c WHERE lower(c.id) LIKE companySearch;
+  ELSE IF (franchiseId !="") THEN
+    RS = Select f FROM StartFranchise:f WHERE lower(f.id) LIKE franchiseSearch; 
   END;
   
   PRINT RS, RS.size(); 

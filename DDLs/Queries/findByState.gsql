@@ -1,0 +1,15 @@
+CREATE QUERY findByState(STRING byState="VA") FOR GRAPH BCBSA_Graph { 
+/**
+ Copyright (c) 2024, Custom Discoveries Inc.
+ All rights reserved.
+**/
+  Start = {State.*};
+  STRING stateSearch = lower(byState);
+  RS= {};
+  
+  IF (byState != "") THEN
+    RS = SELECT company FROM Start:s-(operatesIn:oi)-:company 
+    WHERE lower(s.alias) == stateSearch;
+  END;
+  PRINT RS; 
+}

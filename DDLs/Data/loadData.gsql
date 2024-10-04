@@ -6,11 +6,11 @@ DROP JOB BCBSA_Graph_Vertex_Job
 CREATE LOADING JOB  BCBSA_Graph_Vertex_Job FOR GRAPH  BCBSA_Graph {
 DEFINE FILENAME DS1 = "./GraphData/Root.csv";
 DEFINE FILENAME DS2 = "./GraphData/BCBS-Companies.csv";
-#DEFINE FILENAME DS3 = "./GraphData/States.csv";
+DEFINE FILENAME DS3 = "./GraphData/BCBS_Organizations.csv";
 
   LOAD DS1 TO VERTEX Root VALUES($0, $1, $2) USING SEPARATOR=",", HEADER="true", QUOTE="double", EOL="\n";
   LOAD DS2 TO VERTEX Companies VALUES($0, $1) USING SEPARATOR=",", HEADER="true", QUOTE="double", EOL="\n";
-#  LOAD DS3 TO VERTEX States VALUES($0, $1, $2, $3) USING SEPARATOR=",", HEADER="true", QUOTE="double", EOL="\n";
+  LOAD DS3 TO VERTEX Franchise VALUES($1, $3, $4) USING SEPARATOR=",", HEADER="true", QUOTE="double", EOL="\n";
 }
 #run the Vertex loading job
 RUN LOADING JOB BCBSA_Graph_Vertex_Job
@@ -23,12 +23,14 @@ DROP JOB BCBSA_Graph_Vertex_Job
 #
 DROP JOB BCBSA_Graph_Edge_Job
 CREATE LOADING JOB BCBSA_Graph_Edge_Job FOR GRAPH BCBSA_Graph {
-DEFINE FILENAME DS1 = "./GraphData/BCBS-Companies.csv";
+DEFINE FILENAME DS1 = "./GraphData/hasRegion.csv";
 DEFINE FILENAME DS2 = "./GraphData/BCBS_Organizations.csv";
 DEFINE FILENAME DS3 = "./GraphData/CompanyToCompany.csv";
-
-  LOAD DS1 TO EDGE hasCompany VALUES($2, $0) USING SEPARATOR=",", HEADER="true", EOL="\n", QUOTE="double", VERTEX_MUST_EXIST="true";
-  LOAD DS2 TO EDGE operatesIn VALUES($0, $1, $3) USING SEPARATOR=",", HEADER="true", EOL="\n", QUOTE="double", VERTEX_MUST_EXIST="true";
+DEFINE FILENAME DS4 = "./GraphData/BCBS_hasFranchise.csv";
+#
+  LOAD DS1 TO EDGE hasRegion VALUES($0, $1) USING SEPARATOR=",", HEADER="true", EOL="\n", QUOTE="double", VERTEX_MUST_EXIST="true";
+  LOAD DS4 TO EDGE hasFranchise VALUES($0 $1, $2 $3) USING SEPARATOR=",", HEADER="true", EOL="\n", QUOTE="double", VERTEX_MUST_EXIST="true";
+  LOAD DS2 TO EDGE operatesIn VALUES($0, $2, $4) USING SEPARATOR=",", HEADER="true", EOL="\n", QUOTE="double", VERTEX_MUST_EXIST="true";
   LOAD DS3 TO EDGE hasSubsidiary VALUES($0, $1) USING SEPARATOR=",", HEADER="true", EOL="\n", QUOTE="double", VERTEX_MUST_EXIST="true";
 }
 #run the Edge loading job

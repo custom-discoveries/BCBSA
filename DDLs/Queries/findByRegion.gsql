@@ -1,0 +1,24 @@
+CREATE OR REPLACE QUERY findByRegion(STRING byRegion="NER",STRING byState="PA") FOR GRAPH BCBSA_Graph { 
+/**
+ Copyright (c) 2024, Custom Discoveries Inc.
+ All rights reserved.
+
+ There are 4 Regions:
+  - Northeast Region - NER
+  - Midwest Region - MWR
+  - South Region - SR
+  - West Region - WR
+**/
+  Start = {Region.*};
+  STRING regionSearch  = "%" + lower(byRegion) + "%";
+  STRING stateSearch = lower(byState);
+  RS= {};
+  
+  IF (byRegion != "" AND byState == "") THEN
+    RS = SELECT franchise FROM Start:r-(hasDivision:d)-:div-(hasStates:s)-:state-(operatesIn:oi)-:c-(hasFranchise:hf)-:franchise WHERE lower(r.region_id) LIKE regionSearch;
+  ELSE IF (byRegion != "" AND byState != "") THEN
+    RS = SELECT franchise FROM Start:r-(hasDivision:d)-:div-(hasStates:s)-:state-(operatesIn:oi)-:c-(hasFranchise:hf)-:franchise 
+    WHERE lower(r.region_id) LIKE regionSearch AND lower(state.alias) == stateSearch;
+  END;
+  PRINT RS; 
+}
