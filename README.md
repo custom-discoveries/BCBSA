@@ -1,7 +1,11 @@
 ## Blue Cross Blue Shield Association
 - Blue Cross Blue Shield is a franchise made up of member companies that license the Blue Cross, Blue Shield name. This TigerGraph database contains all the Blue Cross Blue Shield Association member comapnies and states that they operate in. Currently there are 34 companies that operate in all 50 states, District of Columbia, and Puerto Rico.
 ## Example of Global_Types Integration
-- This repository has a dependency on the [**Global_Types**](https://github.com/custom-discoveries/Global_Types) repository and uses the *state* Vertex. Please make sure to clone Global_Types repository and load it into your TigerGraph database as part of deploying this application.
+- This repository demostrates the using of [**Global_Types**](https://github.com/custom-discoveries/Global_Types) repository and uses the *state* Vertex. Please make sure to clone Global_Types repository and load it into your TigerGraph database as part of deploying this application.
+## Example of Edge supporting Mulitple Vertex's
+- This repository demostrates the use of Mulitple Vertex's using the same Edge.
+  - State hasFranchise Franchise
+  - Company hasFranchise Franchise
 ## Install and Run
 ### Install
 To install this TigerGraph demo, clone this repository at a terminal command prompt: 
