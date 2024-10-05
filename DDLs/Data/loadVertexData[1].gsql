@@ -1,0 +1,21 @@
+# Copyright (c) 2024, Custom Discoveries Inc. 
+# All rights reserved.
+#
+# Load the Vertex Data for BCBSA_Graph
+#
+Use Graph BCBSA_Graph
+DROP JOB BCBSA_Graph_Vertex_Job
+CREATE LOADING JOB  BCBSA_Graph_Vertex_Job FOR GRAPH  BCBSA_Graph {
+DEFINE FILENAME DS1 = "./GraphData/Root.csv";
+DEFINE FILENAME DS2 = "./GraphData/BCBS-Companies.csv";
+DEFINE FILENAME DS3 = "./GraphData/BCBS_Organizations.csv";
+
+  LOAD DS1 TO VERTEX Root VALUES($0, $1, $2) USING SEPARATOR=",", HEADER="true", QUOTE="double", EOL="\n";
+  LOAD DS2 TO VERTEX Companies VALUES($0, $1) USING SEPARATOR=",", HEADER="true", QUOTE="double", EOL="\n";
+  LOAD DS3 TO VERTEX Franchise VALUES($1, $3, $4) USING SEPARATOR=",", HEADER="true", QUOTE="double", EOL="\n";
+}
+#run the Vertex loading job
+RUN LOADING JOB BCBSA_Graph_Vertex_Job
+
+#drop the job, indicating the job is completed
+DROP JOB BCBSA_Graph_Vertex_Job

@@ -1,3 +1,5 @@
+# Copyright (c) 2024, Custom Discoveries Inc.
+# All rights reserved.
 #
 DROP JOB ALL
 DROP Graph BCBSA_Graph
@@ -12,13 +14,13 @@ CREATE SCHEMA_CHANGE JOB BCBSA_Graph_Schema_Job FOR GRAPH BCBSA_Graph {
 
   #Color #079705 Icon: Company-1
   ADD VERTEX Companies (PRIMARY_ID id STRING, name STRING) WITH STATS="OUTDEGREE_BY_EDGETYPE", PRIMARY_ID_AS_ATTRIBUTE="true";
+
   #Color #3010f2 Icon: office block
   ADD VERTEX Franchise (PRIMARY_ID id STRING, company_name STRING, brand_name STRING) WITH STATS="OUTDEGREE_BY_EDGETYPE", PRIMARY_ID_AS_ATTRIBUTE="true";
 #
   ADD UNDIRECTED EDGE hasRegion (FROM Root, TO Region);
-  #ADD UNDIRECTED EDGE hasCompany (FROM Root, TO Companies);
-  ADD UNDIRECTED EDGE hasFranchise (FROM Companies, TO Franchise | FROM State, TO Franchise);
-  ADD UNDIRECTED EDGE operatesIn (FROM Companies, TO State, brandName STRING);
+  ADD UNDIRECTED EDGE hasCompany (FROM State, TO Companies);
+  ADD UNDIRECTED EDGE hasFranchise (FROM Companies, TO Franchise | FROM State, TO Franchise, isEdgeType STRING);
   ADD UNDIRECTED EDGE hasSubsidiary (FROM Companies, TO Companies);
   }
 RUN SCHEMA_CHANGE JOB BCBSA_Graph_Schema_Job

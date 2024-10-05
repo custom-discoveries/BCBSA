@@ -1,15 +1,18 @@
-CREATE QUERY findByState(STRING byState="VA") FOR GRAPH BCBSA_Graph { 
+CREATE OR REPLACE QUERY findByState(STRING byState="PA") FOR GRAPH BCBSA_Graph { 
 /**
  Copyright (c) 2024, Custom Discoveries Inc.
  All rights reserved.
 **/
-  Start = {State.*};
+  ListAccum<EDGE> @@edge_list; // list will have all edges traversed
   STRING stateSearch = lower(byState);
+  Start = {State.*};
   RS= {};
   
   IF (byState != "") THEN
-    RS = SELECT company FROM Start:s-(operatesIn:oi)-:company 
-    WHERE lower(s.alias) == stateSearch;
+    RS = SELECT s FROM Start:s-(hasCompany:hc)-:company
+    WHERE lower(s.alias) == stateSearch ACCUM @@edge_list += hc;
+    RS = SELECT s FROM Start:s-(hasStates:hs)-:division
+    WHERE lower(s.alias) == stateSearch ACCUM @@edge_list += hs;
   END;
-  PRINT RS; 
+  PRINT @@edge_list; 
 }

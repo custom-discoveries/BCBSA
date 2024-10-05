@@ -1,4 +1,4 @@
-CREATE OR REPLACE QUERY findByRegion(STRING byRegion="NER",STRING byState="PA") FOR GRAPH BCBSA_Graph { 
+CREATE OR REPLACE QUERY findByRegion(STRING byRegion="NER",STRING vertex_type="Franchise") { 
 /**
  Copyright (c) 2024, Custom Discoveries Inc.
  All rights reserved.
@@ -8,17 +8,30 @@ CREATE OR REPLACE QUERY findByRegion(STRING byRegion="NER",STRING byState="PA") 
   - Midwest Region - MWR
   - South Region - SR
   - West Region - WR
+
+ There are 3 valid VERTEX types:
+   - State
+   - Company
+   - Franchise
 **/
-  Start = {Region.*};
-  STRING regionSearch  = "%" + lower(byRegion) + "%";
-  STRING stateSearch = lower(byState);
+  ListAccum<EDGE> @@edge_list; // list will have all edges traversed
+  STRING regionSearch  = lower(byRegion);
+  Start = {Root.*};
   RS= {};
   
-  IF (byRegion != "" AND byState == "") THEN
-    RS = SELECT franchise FROM Start:r-(hasDivision:d)-:div-(hasStates:s)-:state-(operatesIn:oi)-:c-(hasFranchise:hf)-:franchise WHERE lower(r.region_id) LIKE regionSearch;
-  ELSE IF (byRegion != "" AND byState != "") THEN
-    RS = SELECT franchise FROM Start:r-(hasDivision:d)-:div-(hasStates:s)-:state-(operatesIn:oi)-:c-(hasFranchise:hf)-:franchise 
-    WHERE lower(r.region_id) LIKE regionSearch AND lower(state.alias) == stateSearch;
+  IF (byRegion != "" AND vertex_type == "Franchise") THEN
+    RS = SELECT franchise FROM Start:r-(hasRegion:rg)-:region-(hasDivision:div)-:division-(hasStates:s)-:state-(hasCompany:hc)-:company-(hasFranchise:hf0)-:franchise 
+         WHERE lower(region.region_id) == regionSearch  ACCUM @@edge_list += rg, @@edge_list += div, @@edge_list += s, @@edge_list += hc, @@edge_list += hf0;
+    RS = SELECT f FROM RS:f-(hasFranchise:hf1) - :state - (hasStates:s1) - :div - (hasDivision:hd) - :region
+         WHERE lower(region.region_id) == regionSearch ACCUM @@edge_list += hf1;
+         
+  ELSE IF (byRegion != "" AND vertex_type == "Company") THEN
+    RS = SELECT company FROM Start:r-(hasRegion:rg)-:region-(hasDivision:d)-:div - (hasStates:s)-:state-(hasCompany:hc)-:company 
+         WHERE lower(region.region_id) == regionSearch ACCUM  @@edge_list += rg, @@edge_list += d, @@edge_list += s, @@edge_list += hc;
+         
+  ELSE IF (byRegion != "" AND vertex_type == "State") THEN
+    RS = SELECT state FROM Start:r-(hasRegion:rg)-:region-(hasDivision:d)-:div-(hasStates:s)-:state
+         WHERE lower(region.region_id) == regionSearch ACCUM  @@edge_list += rg, @@edge_list += d, @@edge_list += s;
   END;
-  PRINT RS; 
+  PRINT @@edge_list; 
 }

@@ -1,4 +1,4 @@
-CREATE QUERY findByDivision(STRING byDivision="SAD",STRING byState="VA") FOR GRAPH BCBSA_Graph { 
+CREATE OR REPLACE QUERY findByDivision(STRING byDivision="SCWD", STRING vertex_type="Franchise") { 
 /**
  Copyright (c) 2024, Custom Discoveries Inc.
  All rights reserved.
@@ -13,17 +13,37 @@ CREATE QUERY findByDivision(STRING byDivision="SAD",STRING byState="VA") FOR GRA
   - West South Central Division  SCWD
   - Mountain Division  WRMD
   - Pacific Division  WRPD
+
+ There are 3 valid VERTEX types:
+   - State
+   - Company
+   - Franchise
 **/
-  Start = {Division.*};
+
+  ListAccum<EDGE> @@edge_list; // list will have all edges traversed
   STRING divSearch  = "%" + lower(byDivision) + "%";
-  STRING stateSearch = lower(byState);
+  Start = {Division.*};
   RS= {};
   
-  IF (byDivision != "" AND byState == "") THEN
-    RS = SELECT franchise FROM Start:d-(hasStates:s)-:state-(operatesIn:oi)-:company-(hasFranchise:hf)-:franchise WHERE lower(d.division_id) LIKE divSearch;
-  ELSE IF (byDivision != "" AND byState != "") THEN
-    RS = SELECT franchise FROM Start:d-(hasStates:s)-:state-(operatesIn:oi)-:company-(hasFranchise:hf)-:franchise
-    WHERE lower(d.division_id) LIKE divSearch AND lower(state.alias) == stateSearch;
+  IF (byDivision != "" AND vertex_type == "Franchise") THEN
+    RS = SELECT franchise FROM Start:d-(hasStates:s)-:state-(hasCompany:hc)-:company-(hasFranchise:hf0)-:franchise 
+         WHERE lower(d.division_id) LIKE divSearch ACCUM @@edge_list += s, @@edge_list += hc, @@edge_list += hf0;
+    RS = SELECT f FROM RS:f-(hasFranchise:hf1) - :state - (hasStates:s1) - :d 
+         WHERE lower(d.division_id) LIKE divSearch ACCUM @@edge_list += hf1;
+         
+  ELSE IF (byDivision != "" AND vertex_type == "Company") THEN
+    RS = SELECT company FROM Start:d-(hasStates:s)-:state-(hasCompany:hc)-:company 
+         WHERE lower(d.division_id) LIKE divSearch ACCUM @@edge_list += s, @@edge_list += hc;
+  
+  ELSE IF (byDivision != "" AND vertex_type == "State") THEN
+    RS = SELECT state FROM Start:d-(hasStates:s)-:state 
+         WHERE lower(d.division_id) LIKE divSearch ACCUM @@edge_list += s;
+  
+  ELSE IF (vertex_type == "") THEN
+    PRINT("Vaild Vertex Types are:");
+    PRINT("1. State");
+    PRINT("2. Companies");
+    PRINT("3. Franchise");    
   END;
-  PRINT RS; 
+  PRINT @@edge_list; 
 }
