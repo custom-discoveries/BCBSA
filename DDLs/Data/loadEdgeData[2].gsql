@@ -9,12 +9,13 @@ CREATE LOADING JOB BCBSA_Graph_Edge_Job FOR GRAPH BCBSA_Graph {
 DEFINE FILENAME DS1 = "./GraphData/hasRegion.csv";
 DEFINE FILENAME DS2 = "./GraphData/BCBS_Organizations.csv";
 DEFINE FILENAME DS3 = "./GraphData/CompanyToCompany.csv";
-DEFINE FILENAME DS4 = "./GraphData/BCBS_hasFranchise.csv";
+#DEFINE FILENAME DS4 = "./GraphData/BCBS_hasFranchise.csv";
 #
   LOAD DS1 TO EDGE hasRegion VALUES($0, $1) USING SEPARATOR=",", HEADER="true", EOL="\n", QUOTE="double", VERTEX_MUST_EXIST="true";
   LOAD DS2 TO EDGE hasCompany VALUES($2, $0) USING SEPARATOR=",", HEADER="true", EOL="\n", QUOTE="double", VERTEX_MUST_EXIST="true";
   LOAD DS3 TO EDGE hasSubsidiary VALUES($0, $1) USING SEPARATOR=",", HEADER="true", EOL="\n", QUOTE="double", VERTEX_MUST_EXIST="true";
-  LOAD DS4 TO EDGE hasFranchise VALUES($0 $1, $2 $3, $1) USING SEPARATOR=",", HEADER="true", EOL="\n", QUOTE="double", VERTEX_MUST_EXIST="true";  
+  LOAD DS2 TO EDGE hasFranchise VALUES($0 Companies, $1 Franchise, "Companies") USING SEPARATOR=",", HEADER="true", EOL="\n", QUOTE="double", VERTEX_MUST_EXIST="true";
+  LOAD DS2 TO EDGE hasFranchise VALUES($2 State, $1 Franchise, "State") USING SEPARATOR=",", HEADER="true", EOL="\n", QUOTE="double", VERTEX_MUST_EXIST="true";
 }
 #run the Edge loading job
 RUN LOADING JOB BCBSA_Graph_Edge_Job

@@ -1,63 +1,63 @@
-﻿company_id,franchise_id,state,company_name,brand_name,company.type,franchise.type,state.type
-PREMERA,BCBSAK,2000,Premera,Blue Cross Blue Shield of Alaska,Companies,Franchise,State
-BCBSAL,BCBSAL,1000,Blue Cross Blue Shield of Alabama,Blue Cross Blue Shield of Alabama,Companies,Franchise,State
-BCBSAR,BCBSAR,5000,Blue Cross Blue Shield of Arkansas,Blue Cross Blue Shield of Arkansas,Companies,Franchise,State
-BCBSAZ,BCBSAZ,4000,Blue Cross Blue Shield of Arizona,Blue Cross Blue Shield of Arizona,Companies,Franchise,State
-BCBSCA,BCBSCA,6000,Blue Cross Blue Shield of California,Blue Cross Blue Shield of California,Companies,Franchise,State
-Elevance,BCBSCO,8000,Elevance Health,Blue Cross Blue Shield of Colorado,Companies,Franchise,State
-Elevance,BCBSCT,9000,Elevance Health,Blue Cross of Connecticut,Companies,Franchise,State
-CAREFIRST,BCBSDC,11000,CareFirst,Blue Cross Blue Shield 0f District of Columbia,Companies,Franchise,State
-HIGHMARK,BCBSDE,10000,Highmark,Highmark Blue Cross Blue Shield of Delaware,Companies,Franchise,State
-BCBSFL,BCBSFL,12000,Blue Cross Blue Shield of Florida,Florida Blue,Companies,Franchise,State
-Elevance,BCBSGA,13000,Elevance Health,Blue Cross Blue Shield of Georgia,Companies,Franchise,State
-BCBSHI,BCBSHI,15000,Hawaii Medical Service Association,Blue Cross Blue Shield of Hawaii,Companies,Franchise,State
-WELLMARK,BCBSIA,19000,Wellmark,Blue Cross Blue Shield of Iowa,Companies,Franchise,State
-BCBSID,BCBSID,16000,Blue Cross of Idaho,Blue Cross of Idaho,Companies,Franchise,State
-HCSC,BCBSIL,17000,Health Care Service Corporation,Blue Cross Blue Shield of Illinois,Companies,Franchise,State
-Elevance,BCBSIN,18000,Elevance Health,Blue Cross Blue Shield of Indiana,Companies,Franchise,State
-BCBSKC,BCBSKC,29000,Blue Cross Blue Shield of Kansas City,Blue Cross Blue Shield of Kansas City,Companies,Franchise,State
-BCBSKS,BCBSKS,20000,Blue Cross Blue Shield of Kansas,Blue Cross Blue Shield of Kansas,Companies,Franchise,State
-Elevance,BCBSKY,21000,Elevance Health,Blue Cross Blue Shield of Kentucky,Companies,Franchise,State
-BCBSLA,BCBSLA,22000,Blue Cross Blue Shield of Louisiana,Blue Cross Blue Shield of Louisiana,Companies,Franchise,State
-BCBSMA,BCBSMA,25000,Blue Cross Blue Shield of Massachusetts,Blue Cross Blue Shield of Massachusetts,Companies,Franchise,State
-CAREFIRST,BCBSMD,24000,CareFirst,Blue Cross Blue Shield 0f Maryland,Companies,Franchise,State
-Elevance,BCBSME,23000,Elevance Health,Blue Cross Blue Shield of Maine,Companies,Franchise,State
-BCBSMI,BCBSMI,26000,Blue Cross Blue Shield of Michigan,Blue Cross Blue Shield of Michigan,Companies,Franchise,State
-BCBSMN,BCBSMN,27000,Blue Cross Blue Shield of Minnesota,Blue Cross Blue Shield of Minnesota,Companies,Franchise,State
-Elevance,BCBSMO,29000,Elevance Health,Blue Cross Blue Shield of Missouri,Companies,Franchise,State
-BCBSMS,BCBSMS,28000,Blue Cross Blue Shield of Mississippi,Blue Cross Blue Shield of Mississippi,Companies,Franchise,State
-HCSC,BCBSMT,30000,Health Care Service Corporation,Blue Cross Blue Shield of Montana,Companies,Franchise,State
-BCBSNC,BCBSNC,37000,Blue Cross Blue Shield of North Carolina,Blue Cross Blue Shield of North Carolina,Companies,Franchise,State
-BCBSND,BCBSND,38000,Blue Cross Blue Shield of North Dakota,Blue Cross Blue Shield of North Dakota,Companies,Franchise,State
-Elevance,BCBSNE,31000,Elevance Health,Elevance Blue Cross Blue Shield of Nebraska,Companies,Franchise,State
-BCBSNE,BCBSNE,31000,Blue Cross Blue Shield of Nebraska,Blue Cross Blue Shield of Nebraska,Companies,Franchise,State
-Elevance,BCBSNH,33000,Elevance Health,Blue Cross Blue Shield of New Hampshire,Companies,Franchise,State
-HORIZON,BCBSNJ,34000,Horizon,Blue Cross Blue Shield of New Jersey,Companies,Franchise,State
-HCSC,BCBSNM,35000,Health Care Service Corporation,Blue Cross Blue Shield of New Mexico,Companies,Franchise,State
-Elevance,BCBSNV,32000,Elevance Health,Blue Cross Blue Shield of Nevada,Companies,Franchise,State
-Elevance,BCBSNY,36000,Elevance Health,Empire Blue Cross Blue Shield of New York,Companies,Franchise,State
-EXCELLUS,BCBSNY,36000,Excellus,Excellus Blue Cross Blue Shield of New York,Companies,Franchise,State
-Elevance,BCBSOH,39000,Elevance Health,Blue Cross Blue Shield of Ohio,Companies,Franchise,State
-HCSC,BCBSOK,40000,Health Care Service Corporation,Blue Cross Blue Shield of Oklahoma,Companies,Franchise,State
-CHS,BCBSOR,41000,Cambia Health Solutions,Blue Cross Blue Shield of Oregon,Companies,Franchise,State
-CPC,BCBSPA,42000,Capital Blue Cross,Capital Blue 0f Pennsylvania,Companies,Franchise,State
-TSMC,BCBSPR,72000,Triple-S Management Corop,Blue Cross Blue Shield of Puerto Rico,Companies,Franchise,State
-BCBSRI,BCBSRI,44000,Blue Cross Blue Shield of Rhode Island,Blue Cross Blue Shield of Rhode Island,Companies,Franchise,State
-BCBSSC,BCBSSC,45000,Blue Cross Blue Shield of South Carolina,Blue Cross Blue Shield of South Carolina,Companies,Franchise,State
-WELLMARK,BCBSSD,46000,Wellmark,Blue Cross Blue Shield of South Dakota,Companies,Franchise,State
-BCBSTN,BCBSTN,47000,Blue Cross Blue Shield of Tennessee,Blue Cross Blue Shield of Tennessee,Companies,Franchise,State
-HCSC,BCBSTX,48000,Health Care Service Corporation,Blue Cross Blue Shield of Texas,Companies,Franchise,State
-CHS,BCBSUT,49000,Cambia Health Solutions,Regence Blue Cross Blue Shield of Utah,Companies,Franchise,State
-Elevance,BCBSVA,51000,Elevance Health,Elevance Blue Cross Blue Shield of Virginia,Companies,Franchise,State
-CAREFIRST,BCBSVA,51000,CareFirst,CareFirst Blue Cross Blue Shield of Virginia,Companies,Franchise,State
-BCBSVT,BCBSVT,50000,Blue Cross Blue Shield of Vermont,Blue Cross Blue Shield of Vermont,Companies,Franchise,State
-CHS,BCBSWA,53000,Cambia Health Solutions,Regence Blue Shield of Washington,Companies,Franchise,State
-Elevance,BCBSWI,55000,Elevance Health,Blue Cross Blue Shield of Wisconsin,Companies,Franchise,State
-HIGHMARK,BCBSWV,54000,Highmark,Blue Cross Blue Shield of West Virginia,Companies,Franchise,State
-BCBSWY,BCBSWY,56000,Blue Cross Blue Shield of Wyoming,Blue Cross Blue Shield of Wyoming,Companies,Franchise,State
-Elevance,EHBSCA,6000,Elevance Health,Elevance Blue Cross of California,Companies,Franchise,State
-HIGHMARK,HMBSNY,36000,Highmark,Highmark Blue Cross Blue Shield of New York,Companies,Franchise,State
-HIGHMARK,HMBSPA,42000,Highmark,Highmark Blue Shield Pennsylvania,Companies,Franchise,State
-CHS,IDBSID,16000,Cambia Health Solutions,Regence Blue Shield of Idaho,Companies,Franchise,State
-IBC,INBCPA,42000,Independence Health Group,Independence Blue Cross Of Pennsylvania,Companies,Franchise,State
-PREMERA,PRBCWA,53000,Premera,Blue Cross Blue Shield of Washington,Companies,Franchise,State
+﻿company_id,franchise_id,state,company_name,brand_name
+PREMERA,BCBSAK,2000,Premera,Blue Cross Blue Shield of Alaska
+BCBSAL,BCBSAL,1000,Blue Cross Blue Shield of Alabama,Blue Cross Blue Shield of Alabama
+BCBSAR,BCBSAR,5000,Blue Cross Blue Shield of Arkansas,Blue Cross Blue Shield of Arkansas
+BCBSAZ,BCBSAZ,4000,Blue Cross Blue Shield of Arizona,Blue Cross Blue Shield of Arizona
+BCBSCA,BCBSCA,6000,Blue Cross Blue Shield of California,Blue Cross Blue Shield of California
+Elevance,BCBSCO,8000,Elevance Health,Blue Cross Blue Shield of Colorado
+Elevance,BCBSCT,9000,Elevance Health,Blue Cross of Connecticut
+CAREFIRST,BCBSDC,11000,CareFirst,Blue Cross Blue Shield 0f District of Columbia
+HIGHMARK,BCBSDE,10000,Highmark,Highmark Blue Cross Blue Shield of Delaware
+BCBSFL,BCBSFL,12000,Blue Cross Blue Shield of Florida,Florida Blue
+Elevance,BCBSGA,13000,Elevance Health,Blue Cross Blue Shield of Georgia
+BCBSHI,BCBSHI,15000,Hawaii Medical Service Association,Blue Cross Blue Shield of Hawaii
+WELLMARK,BCBSIA,19000,Wellmark,Blue Cross Blue Shield of Iowa
+BCBSID,BCBSID,16000,Blue Cross of Idaho,Blue Cross of Idaho
+HCSC,BCBSIL,17000,Health Care Service Corporation,Blue Cross Blue Shield of Illinois
+Elevance,BCBSIN,18000,Elevance Health,Blue Cross Blue Shield of Indiana
+BCBSKC,BCBSKC,29000,Blue Cross Blue Shield of Kansas City,Blue Cross Blue Shield of Kansas City
+BCBSKS,BCBSKS,20000,Blue Cross Blue Shield of Kansas,Blue Cross Blue Shield of Kansas
+Elevance,BCBSKY,21000,Elevance Health,Blue Cross Blue Shield of Kentucky
+BCBSLA,BCBSLA,22000,Blue Cross Blue Shield of Louisiana,Blue Cross Blue Shield of Louisiana
+BCBSMA,BCBSMA,25000,Blue Cross Blue Shield of Massachusetts,Blue Cross Blue Shield of Massachusetts
+CAREFIRST,BCBSMD,24000,CareFirst,Blue Cross Blue Shield 0f Maryland
+Elevance,BCBSME,23000,Elevance Health,Blue Cross Blue Shield of Maine
+BCBSMI,BCBSMI,26000,Blue Cross Blue Shield of Michigan,Blue Cross Blue Shield of Michigan
+BCBSMN,BCBSMN,27000,Blue Cross Blue Shield of Minnesota,Blue Cross Blue Shield of Minnesota
+Elevance,BCBSMO,29000,Elevance Health,Blue Cross Blue Shield of Missouri
+BCBSMS,BCBSMS,28000,Blue Cross Blue Shield of Mississippi,Blue Cross Blue Shield of Mississippi
+HCSC,BCBSMT,30000,Health Care Service Corporation,Blue Cross Blue Shield of Montana
+BCBSNC,BCBSNC,37000,Blue Cross Blue Shield of North Carolina,Blue Cross Blue Shield of North Carolina
+BCBSND,BCBSND,38000,Blue Cross Blue Shield of North Dakota,Blue Cross Blue Shield of North Dakota
+Elevance,BCBSNE,31000,Elevance Health,Elevance Blue Cross Blue Shield of Nebraska
+BCBSNE,BCBSNE,31000,Blue Cross Blue Shield of Nebraska,Blue Cross Blue Shield of Nebraska
+Elevance,BCBSNH,33000,Elevance Health,Blue Cross Blue Shield of New Hampshire
+HORIZON,BCBSNJ,34000,Horizon,Blue Cross Blue Shield of New Jersey
+HCSC,BCBSNM,35000,Health Care Service Corporation,Blue Cross Blue Shield of New Mexico
+Elevance,BCBSNV,32000,Elevance Health,Blue Cross Blue Shield of Nevada
+Elevance,BCBSNY,36000,Elevance Health,Empire Blue Cross Blue Shield of New York
+EXCELLUS,BCBSNY,36000,Excellus,Excellus Blue Cross Blue Shield of New York
+Elevance,BCBSOH,39000,Elevance Health,Blue Cross Blue Shield of Ohio
+HCSC,BCBSOK,40000,Health Care Service Corporation,Blue Cross Blue Shield of Oklahoma
+CHS,BCBSOR,41000,Cambia Health Solutions,Blue Cross Blue Shield of Oregon
+CPC,BCBSPA,42000,Capital Blue Cross,Capital Blue 0f Pennsylvania
+TSMC,BCBSPR,72000,Triple-S Management Corop,Blue Cross Blue Shield of Puerto Rico
+BCBSRI,BCBSRI,44000,Blue Cross Blue Shield of Rhode Island,Blue Cross Blue Shield of Rhode Island
+BCBSSC,BCBSSC,45000,Blue Cross Blue Shield of South Carolina,Blue Cross Blue Shield of South Carolina
+WELLMARK,BCBSSD,46000,Wellmark,Blue Cross Blue Shield of South Dakota
+BCBSTN,BCBSTN,47000,Blue Cross Blue Shield of Tennessee,Blue Cross Blue Shield of Tennessee
+HCSC,BCBSTX,48000,Health Care Service Corporation,Blue Cross Blue Shield of Texas
+CHS,BCBSUT,49000,Cambia Health Solutions,Regence Blue Cross Blue Shield of Utah
+Elevance,BCBSVA,51000,Elevance Health,Elevance Blue Cross Blue Shield of Virginia
+CAREFIRST,BCBSVA,51000,CareFirst,CareFirst Blue Cross Blue Shield of Virginia
+BCBSVT,BCBSVT,50000,Blue Cross Blue Shield of Vermont,Blue Cross Blue Shield of Vermont
+CHS,BCBSWA,53000,Cambia Health Solutions,Regence Blue Shield of Washington
+Elevance,BCBSWI,55000,Elevance Health,Blue Cross Blue Shield of Wisconsin
+HIGHMARK,BCBSWV,54000,Highmark,Blue Cross Blue Shield of West Virginia
+BCBSWY,BCBSWY,56000,Blue Cross Blue Shield of Wyoming,Blue Cross Blue Shield of Wyoming
+Elevance,EHBSCA,6000,Elevance Health,Elevance Blue Cross of California
+HIGHMARK,HMBSNY,36000,Highmark,Highmark Blue Cross Blue Shield of New York
+HIGHMARK,HMBSPA,42000,Highmark,Highmark Blue Shield Pennsylvania
+CHS,IDBSID,16000,Cambia Health Solutions,Regence Blue Shield of Idaho
+IBC,INBCPA,42000,Independence Health Group,Independence Blue Cross Of Pennsylvania
+PREMERA,PRBCWA,53000,Premera,Blue Cross Blue Shield of Washington
